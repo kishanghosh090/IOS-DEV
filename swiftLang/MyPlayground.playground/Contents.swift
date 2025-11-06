@@ -45,10 +45,36 @@ address = "21"
 
 // type conversion
 
-let googleStock = 12.5
-let userStockBuy:Int = 1 + Int(googleStock)
-print(userStockBuy)
+// let googleStock = 12.5
+// let userStockBuy:Int = 1 + Int(googleStock)
+// print(userStockBuy)
 
-let userAge = "55"
-let intVal = Int(userAge)
-print((intVal ?? 0) + 12)
+// let userAge = "55a"
+// let intVal = Int(userAge)
+// // print(intVal)
+// let storedNullOpretor = (intVal ?? 0) + 12
+// print(storedNullOpretor)
+// nil
+
+// logical opretors
+
+// var isLoggedIn: Bool = false
+// isLoggedIn = !isLoggedIn
+// print(isLoggedIn)
+// var cardDetails = true
+// var canPay = isLoggedIn && cardDetails
+
+// print(canPay)
+
+// optionals
+
+// forced unwrapping
+
+// optional binding
+
+var userCity: String?
+var accountActive
+
+print(userCity)
+print(accountActive)
+
