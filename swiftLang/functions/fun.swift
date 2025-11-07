@@ -37,3 +37,4 @@ func factorial(_ n: Int) -> Int {
 }
 let fact5 = factorial(5)
 print("Factorial of 5 is \(fact5)")
+
