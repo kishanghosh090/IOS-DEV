@@ -68,3 +68,22 @@ struct DC {
 }
 let batman = DC(heroName: "Batman", realName: "Bruce Wayne", superPower: "Genius-level intellect, peak human physical condition, martial arts skills", age: 42)
 batman.displayInfo()
+
+// struct vs class
+struct StructExample {
+    var value: Int
+}
+class ClassExample {
+    var value: Int
+    init(value: Int) {
+        self.value = value
+    }
+}
+var struct1 = StructExample(value: 10)
+var struct2 = struct1
+struct2.value = 20
+print("Struct Example - struct1 value: \(struct1.value), struct2 value: \(struct2.value)") // struct1 value: 10, struct2 value: 20
+var class1 = ClassExample(value: 10)
+var class2 = class1
+class2.value = 20
+print("Class Example - class1 value: \(class1.value), class2 value: \(class2.value)") // class1 value: 20, class2 value: 20
