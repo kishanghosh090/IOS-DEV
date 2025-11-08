@@ -4,12 +4,19 @@ struct Marvel {
     var superPower: String 
     var age: Int = 0 // Default value
 
+    init(heroName: String = "", realName: String = "", superPower: String = "", age: Int = 0) {
+        self.heroName = heroName
+        self.realName = realName
+        self.superPower = superPower
+        self.age = age
+    }
     func displayInfo() {
         print("Hero Name: \(heroName)")
         print("Real Name: \(realName)")
         print("Super Power: \(superPower)")
         print("Age: \(age)")
     }
+
     
 }
 let ironMan = Marvel(heroName: "Iron Man", realName: "Tony Stark", superPower: "Genius-level intellect, Powered armor suit", age: 48)
@@ -35,3 +42,29 @@ scaler.realName = "Michael"
 scaler.superPower = "Size manipulation"
 scaler.age = 25
 scaler.displayInfo()
+
+// with init structure
+
+struct DC {
+    var heroName: String
+    var realName: String
+    var superPower: String 
+    var age: Int 
+
+    // init is defined here it is used to initialize the properties of the struct when a new instance is created. (constructor) 
+    init(heroName: String, realName: String, superPower: String, age: Int) {
+        self.heroName = heroName
+        self.realName = realName
+        self.superPower = superPower
+        self.age = age
+    }
+
+    func displayInfo() {
+        print("Hero Name: \(heroName)")
+        print("Real Name: \(realName)")
+        print("Super Power: \(superPower)")
+        print("Age: \(age)")
+    }
+}
+let batman = DC(heroName: "Batman", realName: "Bruce Wayne", superPower: "Genius-level intellect, peak human physical condition, martial arts skills", age: 42)
+batman.displayInfo()
