@@ -62,3 +62,18 @@ let circle = Circle()
 circle.area = 50.0
 print("Updated radius after setting area to 50.0: \(circle.radius)")
 // Computed property with getter and setter
+
+// property observers example
+class Changes {
+    var num1: Int = 0 {
+        willSet {
+            print("num1 will change from \(num1) to \(newValue)")
+        }
+        didSet {
+            if num1 > oldValue {
+                print("num1 changed from \(oldValue) to \(num1)")
+            }
+        }
+    }
+    
+}
