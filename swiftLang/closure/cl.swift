@@ -55,12 +55,64 @@
 //     return num * num
 // }
 
-func calculate(num1: Int, num2: Int) -> Int {
-    return num1 * num1 + num2 * num2
+// func calculate(num1: Int, num2: Int) -> Int {
+//     return num1 * num1 + num2 * num2
+// }
+
+// func sumSqr(nums1: Int, nums2: Int, closureParams: (Int,Int) -> Int) -> Int {
+//     return closureParams(nums1, nums2) // we are calling the closure here when we pass it as parameter no need to use 'in' keyword and we just call it like a normal function without labels of parameters of closure for example here we just use nums1 and nums2 directly 
+// }
+// let result = sumSqr(nums1: 3, nums2: 4, closureParams: calculate) //when we pass function as parameter we don't use () and just use the name of function
+// print("sumSqr with calculate closure:", result)
+
+
+// let result2 = sumSqr(nums1: 5, nums2: 12, closureParams: { (a: Int, b: Int) -> Int in
+//     return a * a + b * b
+// })
+// print("sumSqr with inline closure:", result2)
+
+// let result3 = sumSqr(nums1: 8, nums2: 15, closureParams: { a, b in
+//     a * a + b * b
+// })
+// print("sumSqr with shorthand closure:", result3)
+
+
+
+// func name(with url: URL,completionHandler: @escaping (Data?,URLResponse, Error?) -> Void) -> Void {
+//     // Simulating an asynchronous operation
+//     DispatchQueue.global().async {
+//         // Simulate fetching name from URL
+//         let fetchedName = "Sample Name from \(url.absoluteString)"
+//         // Call the completion handler with the fetched name
+//         completionHandler(fetchedName)
+//     }
+    
+// }
+
+// order closure execution
+func printNumbers(result: () -> Void)  {
+    print("Before executing closure")
+    result()
+    print("After executing closure")
+    
 }
 
-func sumSqr(nums1: Int, nums2: Int, closureParams: (Int,Int) -> Int) -> Int {
-    return closureParams(nums1, nums2) // we are calling the closure here when we pass it as parameter no need to use 'in' keyword and we just call it like a normal function without labels of parameters of closure for example here we just use nums1 and nums2 directly 
+printNumbers {
+    print("Inside the closure: Printing numbers 1 to 5")
+    for i in 1...5 {
+        print(i)
+    }
 }
-let result = sumSqr(nums1: 3, nums2: 4, closureParams: calculate) //when we pass function as parameter we don't use () and just use the name of function
-print("sumSqr with calculate closure:", result)
+
+// order closure
+func printNumbersOrder(result: @autoclosure () -> Void)  {
+    print("Before executing closure")
+    result()
+    print("After executing closure")
+}
+printNumbersOrder(result: {
+    print("Inside the autoclosure: Printing numbers 6 to 10")
+    for i in 6...10 {
+        print(i)
+    }
+}())
