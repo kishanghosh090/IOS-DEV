@@ -75,5 +75,8 @@ class Changes {
             }
         }
     }
-    
 }
+
+let answer = Changes()
+answer.num1 = 10
+answer.num1 = 5
