@@ -1,9 +1,34 @@
+
+
+import Foundation
 // let and var is used to create variable in swift (let is used to create constant variable and var is used to create variable which can be changed later)
 
 // let -> immutable (cannot be changed later)
 // var -> mutable (can be changed later)
 
 // Example of let
+var names = [
+    "Anna",
+    "Alex",
+    "Brian",
+    "Jack"
+]
+let moreNames = [
+    "Mary",
+    "John"
+]
+var copy = names // valid
+names.append("Mary") // valid
+names.remove(at: 0) // valid
+print(names)
+
+// moreNames.append("John") // invalid
+// moreNames.remove(at: 0) // invalid
+// moreNames = [] // invalid
+
+
+
+
 let i:Int?
 i = nil
 if i != nil {
