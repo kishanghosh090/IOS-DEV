@@ -57,3 +57,9 @@ print(firstIntegers[0].value)
 // Prints "10"
 print(secondIntegers[0].value)
 // Prints "100"
+
+var myName = "john"
+myName = myName.uppercase()
+
+
+print(myName) // Prints "John"
