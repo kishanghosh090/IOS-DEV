@@ -26,8 +26,8 @@ func customAdd(_ lhs: Int, _ rhs: Int, using fun: (Int, Int) -> Int) -> Int {
 }
 
 let result = customAdd(4, 6, using: add)
-let result2 = customAdd(4, 6, using: { (a: Int, b: Int) -> Int in
+let result2 = customAdd(4, 6){ (a: Int, b: Int) -> Int in
     return a + b
 }
-)
+
 print(result) // prints 10
